@@ -9,8 +9,11 @@ Gem::Specification.new do |spec|
 
   spec.name          = 'bitok'
   spec.version       = Bitok::VERSION
+  spec.authors       = ['Tigran Apoyan']
+  spec.email         = ['apoyan.tigran@gmail.com']
 
   spec.summary       = 'Ruby wrapper for Bitok API'
+  spec.homepage      = 'https://github.com/apoyan/bitok'
   spec.license       = 'MIT'
 
   spec.require_paths = ['lib']
@@ -19,7 +22,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'jwt', '~> 2.2'
 
-  spec.add_development_dependency 'bundler', '~> 1.17'
+  spec.add_development_dependency 'bundler', '~> 2.6'
   spec.add_development_dependency 'minitest', '~> 5.0'
   spec.add_development_dependency 'pry-byebug'
   spec.add_development_dependency 'rake', '~> 13.0'

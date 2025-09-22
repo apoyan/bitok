@@ -4,6 +4,7 @@ require "net/http"
 require "json"
 require "openssl"
 require "base64"
+require 'date'
 
 module Bitok
   # Interface to GET, POST, PUT
@@ -15,8 +16,8 @@ module Bitok
         new(path: path).get(body, headers)
       end
 
-      def put(path:, body:, headers: {})
-        new(path: path).put(body, headers)
+      def post(path:, body:, headers: {})
+        new(path: path).post(body, headers)
       end
     end
 

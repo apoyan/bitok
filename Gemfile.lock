@@ -1,0 +1,62 @@
+PATH
+  remote: .
+  specs:
+    bitok (0.0.1)
+      jwt (~> 2.2)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ast (2.4.3)
+    base64 (0.3.0)
+    byebug (12.0.0)
+    coderay (1.1.3)
+    jwt (2.10.2)
+      base64
+    method_source (1.1.0)
+    minitest (5.25.5)
+    parallel (1.27.0)
+    parser (3.3.9.0)
+      ast (~> 2.4.1)
+      racc
+    prism (1.5.1)
+    pry (0.15.2)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+    pry-byebug (3.11.0)
+      byebug (~> 12.0)
+      pry (>= 0.13, < 0.16)
+    racc (1.8.1)
+    rainbow (3.1.1)
+    rake (13.3.0)
+    regexp_parser (2.11.3)
+    rexml (3.4.4)
+    rubocop (0.93.1)
+      parallel (~> 1.10)
+      parser (>= 2.7.1.5)
+      rainbow (>= 2.2.2, < 4.0)
+      regexp_parser (>= 1.8)
+      rexml
+      rubocop-ast (>= 0.6.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (>= 1.4.0, < 2.0)
+    rubocop-ast (1.47.1)
+      parser (>= 3.3.7.2)
+      prism (~> 1.4)
+    ruby-progressbar (1.13.0)
+    unicode-display_width (1.8.0)
+
+PLATFORMS
+  arm64-darwin-24
+  ruby
+
+DEPENDENCIES
+  bitok!
+  bundler (~> 2.6)
+  minitest (~> 5.0)
+  pry-byebug
+  rake (~> 13.0)
+  rubocop (~> 0.56)
+
+BUNDLED WITH
+   2.6.2
