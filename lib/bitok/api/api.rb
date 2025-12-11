@@ -42,6 +42,16 @@ module Bitok
         )
       end
 
+      def create_manual_check_address(network:, address:)
+        Request.post(
+          body: {
+            network: network,
+            address: address
+          },
+          path: "/v1/manual-checks/check-address/"
+        )
+      end
+
       def get_transfer(transfer_id)
         Request.get(path: "/v1/transfers/#{transfer_id}/")
       end
@@ -56,6 +66,18 @@ module Bitok
 
       def get_transfer_risks(transfer_id)
         Request.get(path: "/v1/transfers/#{transfer_id}/risks/")
+      end
+
+      def get_manual_check_address_details(check_id)
+        Request.get(path: "/v1/manual-checks/#{check_id}/")
+      end
+
+      def get_manual_check_address_risks(check_id)
+        Request.get(path: "/v1/manual-checks/#{check_id}/risks/")
+      end
+
+      def get_manual_check_address_exposure(check_id)
+        Request.get(path: "/v1/manual-checks/#{check_id}/address-exposure/")
       end
     end
   end
