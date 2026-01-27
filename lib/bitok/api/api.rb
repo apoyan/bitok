@@ -12,7 +12,7 @@ module Bitok
         Request.get(path: "/v1/basics/tokens/")
       end
 
-      def create_registration(network:, direction:, address:, tx_hash:, token_id:,  client_id: nil)
+      def create_registration(network:, direction:, address:, tx_hash:, token_id:,  client_id: nil, risk_model: nil)
         Request.post(
           body: {
             client_id: client_id,
@@ -20,13 +20,14 @@ module Bitok
             network: network,
             tx_hash: tx_hash,
             token_id: token_id,
-            output_address: address
+            output_address: address,
+            risk_model: risk_model
           },
           path: "/v1/transfers/register/"
         )
       end
 
-      def create_registration_attempt(network:, direction:, address:, token_id: nil, client_id: nil, amount: nil, attempt_id: nil)
+      def create_registration_attempt(network:, direction:, address:, token_id: nil, client_id: nil, amount: nil, attempt_id: nil, risk_model: nil)
         address_key = direction == 'incoming' ? :input_address : :output_address
         Request.post(
           body: {
@@ -36,17 +37,19 @@ module Bitok
             token_id: token_id,
             amount: amount,
             attempt_id: attempt_id,
+            risk_model: risk_model
           }.merge(address_key => address)
            .compact,
           path: "/v1/transfers/register-attempt/"
         )
       end
 
-      def create_manual_check_address(network:, address:)
+      def create_manual_check_address(network:, address:, risk_model: nil)
         Request.post(
           body: {
             network: network,
-            address: address
+            address: address,
+            risk_model: risk_model
           },
           path: "/v1/manual-checks/check-address/"
         )
