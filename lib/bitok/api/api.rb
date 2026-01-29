@@ -82,6 +82,10 @@ module Bitok
       def get_manual_check_address_exposure(check_id)
         Request.get(path: "/v1/manual-checks/#{check_id}/address-exposure/")
       end
+
+      def get_manual_check_pdf_report(check_id)
+        Request.get(path: "/v1/manual-checks/#{check_id}/pdf-report/")
+      end
     end
   end
 end
