@@ -50,7 +50,7 @@ module Bitok
             network: network,
             address: address,
             risk_model: risk_model
-          },
+          }.compact,
           path: "/v1/manual-checks/check-address/"
         )
       end
