@@ -22,7 +22,7 @@ module Bitok
             token_id: token_id,
             output_address: address,
             risk_model: risk_model
-          },
+          }.compact,
           path: "/v1/transfers/register/"
         )
       end
