@@ -71,6 +71,10 @@ module Bitok
         Request.get(path: "/v1/transfers/#{transfer_id}/risks/")
       end
 
+      def get_transfer_report(transfer_id)
+        Request.get(path: "/v1/transfers/#{transfer_id}/pdf-report/")
+      end
+
       def get_manual_check_address_details(check_id)
         Request.get(path: "/v1/manual-checks/#{check_id}/")
       end
